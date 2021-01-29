@@ -1,0 +1,19 @@
+version: "3.7"
+services:
+  mysql-db:
+    build:
+      context: mysql-db
+      dockerfile: Dockerfile
+    container_name: dbnerd-1_mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DBNERD_MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${DBNERD_DB_NAME}
+      MYSQL_USER: ${DBNERD_MYSQL_USER}
+      MYSQL_PASSWORD: ${DBNERD_MYSQL_PASSWORD}
+    healthcheck:
+      test: [ "CMD","mysqladmin","ping","-h","localhost","-u","${DBNERD_MYSQL_USER}","--password=${DBNERD_MYSQL_PASSWORD}" ]
+      interval: 2s
+      timeout: 10s
+      retries: 10
+    ports:
+      - 3306:3306
