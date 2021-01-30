@@ -1,4 +1,4 @@
-name: DBNerd-1 CI
+name: DBNerd-1 CI/CD
 
 on:
   push:
