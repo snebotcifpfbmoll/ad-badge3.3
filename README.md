@@ -14,6 +14,7 @@ Además se debe especificar unas variables para poder acceder a la base de datos
 - BNERD_MYSQL_USER
 - BNERD_MYSQL_PASSWORD
 - DBNERD_MYSQL_URL
+
 ## Docker Compose
 Hay una serie de archivos de Docker Compose que tienen diferentes propositos:
 - `docker-compose.dev.yml`: Iniciar un contenedor de MySQL con el schema generado.
