@@ -22,7 +22,7 @@ public class RootController {
     @RequestMapping(value = "", method = {RequestMethod.GET}, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Object> rootMessage() {
         try {
-            return new ResponseEntity<>(new String[]{"Hello from ad-badge3.3 :)", "This is a live test."}, HttpStatus.OK);
+            return new ResponseEntity<>(new String[]{"Hello from ad-badge3.3 :)"}, HttpStatus.OK);
         } catch (Exception e) {
             log.error("failed to precess request ", e);
             return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
